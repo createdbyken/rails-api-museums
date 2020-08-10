@@ -21,13 +21,18 @@ class Scraper
     end
 
     def scrape_city_pages(city_urls)
+        museums_list = []
+
         city_urls.each do |city_url|
             url = "http://www.museumsusa.org#{city_url}"
             html = open(url)
             doc = Nokogiri::HTML(html)
 
-            
+            museums_list << doc.css('.itemGroup').css('.item').css('.basic')
         end
+    end
+
+    def create_museums(museums_list) 
     end
 end
 
