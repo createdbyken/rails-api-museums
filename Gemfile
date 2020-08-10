@@ -9,11 +9,14 @@ gem 'puma', '~> 3.11'         # Use Puma as the app server
 gem 'bootsnap', '>= 1.1.0', require: false  # Reduces boot times through caching; required in config/boot.rb
 gem 'rack-cors'               # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS)
 gem 'jbuilder', '~> 2.5'      # Build JSON APIs with ease. 
+gem 'nokogiri'
+
 # gem 'mini_magick', '~> 4.8' # Use ActiveStorage variant
 
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry'
 end
 
 group :development do
