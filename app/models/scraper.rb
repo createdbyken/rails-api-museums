@@ -34,6 +34,8 @@ class Scraper
     end
 
     def create_museums(museums_list)
+        museums = []
+
         museums_list.each do |museum|
             name = museum.css('.source').css('a').text
             location = museum.css('.location').text.split(', ')
